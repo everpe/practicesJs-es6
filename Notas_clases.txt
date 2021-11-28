@@ -1,0 +1,11 @@
+Object.getOwnPropertiesName(nameObject)=> solo las claves
+Object.values(nameObject)=>   solo valores del objeto como array
+
+Todos los datos primitivos se pasan por valor.
+y los Objetos por referencia.
+Para romper la referencia de obejetos y crear instancia copia a partir de otra usar:
+ejp: 
+		let juan = { nombre: 'Juan' };
+		//Operador spread para romper referencia
+		let ana  = { ...juan };
+		para arreglos igual pero con [...nameArray]
