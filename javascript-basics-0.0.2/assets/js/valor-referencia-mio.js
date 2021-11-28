@@ -15,7 +15,7 @@ let cambiado = cambiarNombre(peter);
 console.log({cambiado, peter});
 
 // SOLUCIÓN
-// oPERADOR SPREAD ...
+// OPERADOR SPREAD ...
 
 //pARA ARREGLOS
 let frutas=['Manzana','Pera','Bananno'];
