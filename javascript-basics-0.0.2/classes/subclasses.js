@@ -1,4 +1,3 @@
-
 class PersonaNatural {
 
     //Propiedad estatica
@@ -7,7 +6,7 @@ class PersonaNatural {
         return PersonaNatural._conteo + ': instancias';
     }
     static mensaje(){
-        console.log('Mensaje de metodo estatico');
+        console.log('Mensa de metodo estatico');
     }
 
     //Propiedades instanciadas
@@ -42,13 +41,17 @@ class PersonaNatural {
     }
 
 }
-
-const persona = new PersonaNatural('Peter parker', 'Spiderman', 'am friendly');
-persona.miFrase();
-persona.setComida = 'Carne asada';
-
-//static value
-console.log('Conteo estático', PersonaNatural._conteo );
-//static methods
-console.log(PersonaNatural.obtenerConteo);
-PersonaNatural.mensaje();
+class Heroe extends PersonaNatural{
+    clan = 'sin clan';
+    constructor(nombre,codigo,frase){
+        //Dad constructor
+        super(nombre,codigo,frase);
+    }
+    showMe(){
+        super.showMe();
+        console.log("Soy el hero:", this.nombre);
+    }
+}
+const hero = new Heroe("Tarzan","Mono de la selva","Jane voy a por tí");
+console.log(hero);
+hero.showMe();
